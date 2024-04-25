@@ -9,7 +9,7 @@ interface Todos {
 
 const useTodos = () => {
     const fetchData = async()=>{
-        const response = await axios.get<Todos[]>('https://xjsonplaceholder.typicode.com/todos')
+        const response = await axios.get<Todos[]>('https://jsonplaceholder.typicode.com/todos')
         return response.data
     }
 

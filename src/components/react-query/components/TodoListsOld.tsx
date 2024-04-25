@@ -1,6 +1,13 @@
 import axios, { CanceledError } from "axios"
 import { useEffect, useState } from "react"
 
+/**
+ * * Problems with making traditional/old API requests
+ * ? No separation of concern
+ * ? No request cancellation
+ * ? No automatic refresh
+ * ? No caching
+ */
 
 interface Todos {
     id:number;
