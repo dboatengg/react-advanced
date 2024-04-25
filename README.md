@@ -2,10 +2,9 @@
 This repo contains my journey of learning advanced concepts in React.
 
 ## Topics Covered
-- State Management (Redux, Context API)
-- Performance Optimization (Memoization, Code Splitting)
-- Server-Side Rendering (Next.js)
-- Advanced Hooks
+- React Query
+- Global State Management (Reducers, Context API, Providers, Redux, Zustand)
+- Routing (React Router)
 - Testing (Jest, React Testing Library)
 
 
