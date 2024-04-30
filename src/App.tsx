@@ -1,15 +1,17 @@
-import PostsLists from './components/react-query/components/PostsLists'
-import TodoListsOld from './components/react-query/components/TodoListsOld'
-import TodoListsReactQuery from './components/react-query/components/TodoListsReactQuery'
+import PostsLists from './group/react-query/components/3-PostsLists'
+import TodoListsOld from './group/react-query/components/1-TodoListsOld'
+import TodoListsReactQuery from './group/react-query/components/2-TodoListsReactQuery'
+import Pagination from './group/react-query/components/4-Pagination'
 
 const App = () => {
   return (
     <>
     {/* <TodoLists/> */}
-    <TodoListsReactQuery/>
+    {/* <TodoListsReactQuery/> */}
     {/* <PostsLists/> */}
+    <Pagination/>
     </>
   )
 }
 
-export default App
+export default App;
