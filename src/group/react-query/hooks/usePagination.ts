@@ -27,7 +27,7 @@ const getPosts = async() =>{
 return useQuery<Posts[], Error>({
     queryKey: ['posts', query],
     queryFn: getPosts, 
-    staleTime: 6 * 60 * 60 * 1000, // 6 hours in milliseconds
+    // staleTime: 6 * 60 * 60 * 1000,
     // keepPreviousData: true,
 })}
 
