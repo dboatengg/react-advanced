@@ -3,8 +3,10 @@ import useInfinite from '../hooks/useInfinite';
 
 const Infinite = () => {
     const pageSize = 10;
-    const {data, fetchNextPage, isFetchingNextPage} = useInfinite({pageSize})
+    const {data, isLoading, fetchNextPage, isFetchingNextPage} = useInfinite({pageSize})
   return (
+    <>
+    {isLoading ? "Loading..." :
     <>
       <ul className='list-group m-4'>
         {data?.pages.map((page, index)=>
@@ -15,6 +17,7 @@ const Infinite = () => {
       <button disabled={isFetchingNextPage} onClick={()=>fetchNextPage()} className="btn btn-primary ms-3">
         {isFetchingNextPage?"Loading":"Load More"}
       </button>
+    </> }
     </>
   )
 }
