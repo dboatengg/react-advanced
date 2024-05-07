@@ -4,6 +4,7 @@ import TodoListsReactQuery from './group/react-query/components/2-TodoListsReact
 import Pagination from './group/react-query/components/4-Pagination'
 import Infinite from './group/react-query/components/Infinite'
 import TodoList from './group/react-query/todo-app/TodoList'
+import TodoForm from './group/react-query/todo-app/TodoForm'
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       {/* <PostsLists/> */}
       {/* <Pagination/> */}
       {/* <Infinite/> */}
-      <TodoList/>
+      <TodoForm/>
     </div>
   )
 }

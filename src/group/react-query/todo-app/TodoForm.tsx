@@ -2,13 +2,14 @@ import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { useRef } from "react"
 import { Todo } from "./hook/useTodo"
 import axios from "axios"
+import TodoList from "./TodoList"
 
 const TodoForm = () => {
   const queryClient = useQueryClient();
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const addTodo = useMutation({
+  const addTodo = useMutation<Todo,Error, Todo>({
     mutationFn: (todo:Todo) => axios
     .post('https://jsonplaceholder.typicode.com/todos',todo)
     .then(res=>res.data),
@@ -39,11 +40,15 @@ const TodoForm = () => {
     }
 
   return (
+    <>
+    {addTodo.error && <div className="alert alert-danger">{addTodo.error.message}</div>}
     <form className="row mb-3" onSubmit={onsubmit}>
         <div className="col"><input ref={inputRef} type="text" className="form-control"/></div>
         <div className="col"><button className="btn btn-primary">Add</button></div>
     </form>
+    <TodoList/>
+    </>
   )
 }
 
-export default TodoForm
+export default TodoForm;
